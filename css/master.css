@@ -1,0 +1,148 @@
+/* ------- Main Settings ------ */
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    background-color: var(--Light-Gray);
+}
+/* ==============================================*/
+.price-card {
+    background-color: white;
+    border-radius: 10px;
+    width: 700px;
+    /* margin: auto; */
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+@media (max-width:991px) {
+    .price-card {
+        max-width: 100%;
+        left:0;
+        top:0;
+        transform: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+.price-card .top-box {
+    padding: 40px 30px;
+    width:100%;
+}
+@media (max-width:991px) {
+    .price-card .top-box {
+        padding: 20px 10px;
+        max-width: 100%;
+        
+        
+    }
+    .price-card .top-box p {
+        
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1.8;
+    }
+}
+
+.price-card .top-box h4 {
+    margin: 0;
+    color: var(--Cyan);
+    font-size: 25px;
+}
+.price-card .top-box .info{
+    font-size: 16px;
+    color: var(--Bright-Yellow);
+    font-weight: bold;
+}
+.price-card .top-box p:not(:first-of-type){
+    color: var(--Grayish-Blue);
+    font-weight: bold;
+    margin: 5px 0 0 0;
+}
+
+.price-card .down-box{
+    width: 100%;
+    display: flex;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--Cyan);
+
+}
+@media (max-width:991px) {
+    .price-card .down-box{
+        flex-direction: column;
+    }
+    .price-card .box {
+        padding: 10px 5px;
+    }
+}
+
+.price-card .box {
+    padding:40px 30px 40px;
+    color: white;
+    flex: 1; 
+}
+.price-card .box:nth-of-type(2){
+    background-color: rgb(74, 190, 189);
+}
+@media (max-width:991px) {
+    .price-card .box {
+        padding: 20px 30px;  
+    }
+}
+.price-card .box h5{
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.price-card .box span:first-of-type{
+    font-size: 30px;
+    font-weight: bold;
+}
+.price-card .box span:last-of-type{
+    display: inline-block;
+    margin-left: 10px;
+    color: rgb(107, 216, 219);
+}
+.price-card .box a {
+    text-decoration: none;
+    display: block;
+    margin-top: 40px;
+    width: 250px;
+    padding: 15px 50px;
+    border-radius: 5px;
+    background-color: var(--Bright-Yellow);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.price-card .box ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    
+}
+.price-card .box ul li {
+    margin: 0;
+    padding-bottom: 5px;
+}
